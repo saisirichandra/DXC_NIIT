@@ -1,31 +1,18 @@
 
 public class This2 {
 
-	int id;  	
-	String name;  
-	This2(int i,String n){  
-		id = i;  
-		name = n;  
-	}  
-	This2(){
-
-
-
-
-	}
-
-
-
-
-
-
-	void display(){System.out.println(id+" "+name);}  
-
+	int i;  	
+	String n;  
+	This2(int i,String n)
+	{  
+		this.i = i;  
+		this.n = n;  
+	} 
 	public static void main(String args[]){  
-		This2 s1 = new This2(111,"Karan");  
-		This2 s2 = new This2();  
-
-		s1.display();  
-		s2.display();  
+		This2 s1 = new This2(111,"Karan");
+		This2 s2 = new This2(1,"Ka");
+		This2 s3;
+		s3=s2;
+		System.out.println(s1);
 	}  
 }
