@@ -1,0 +1,13 @@
+package delaultMethod;
+
+public interface Demo {
+
+	public void method1();
+	public void method2();
+
+	default public void method3() { 
+		System.out.println("default method");
+	}
+
+
+}

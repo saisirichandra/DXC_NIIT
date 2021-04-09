@@ -9,14 +9,37 @@ public class Account implements Serializable{
 	String userName = "abdul";
 	transient String password = "ansari";
 
+	
+	
+	
+	
+	
+	
+	
+	
 	private void writeObject(ObjectOutputStream oos) throws ClassNotFoundException,IOException{
+	
+		oos.writeUTF("123"+userName+","+"456"+password);
+
 		
-		oos.writeUTF("123"+password);
+		
+		
+		//oos.writeUTF(",456"+password);
 	}
 	
+	
+	
+	
 	private void readObject(ObjectInputStream ois) throws IOException {
-		this.password = ois.readUTF().substring(3);
+	
+		String[] unPwd = ois.readUTF().split(",");
+		
+		this.userName = unPwd[0].substring(3);
+		
+		this.password = unPwd[1].substring(3);
 	}
+	
+	
 	
 	
 }
